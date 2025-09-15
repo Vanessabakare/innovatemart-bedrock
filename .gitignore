@@ -1,0 +1,16 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+tfplan*
+# Kubeconfig & creds
+kubeconfig*
+*.pem
+# OS/editor
+.DS_Store
+*.swp
