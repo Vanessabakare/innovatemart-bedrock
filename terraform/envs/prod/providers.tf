@@ -3,17 +3,15 @@ terraform {
   required_providers {
     aws = { source = "hashicorp/aws", version = "~> 5.0" }
   }
-  backend "s3" {}  # values supplied via backend.hcl at init
+  backend "s3" {}  # values come from backend.hcl
 }
 
 variable "aws_region"  { default = "us-east-1" }
-variable "aws_profile" { default = "InnovateMart" }
 
 provider "aws" {
-  region  = var.aws_region
-  profile = var.aws_profile
+  region = var.aws_region
 
-  # Auto-tag every resource we create
+
   default_tags {
     tags = {
       innovate    = "true"
@@ -23,5 +21,4 @@ provider "aws" {
   }
 }
 
-# simple sanity data source
 data "aws_caller_identity" "current" {}
