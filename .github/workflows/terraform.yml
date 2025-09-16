@@ -21,6 +21,8 @@ jobs:
         working-directory: terraform/envs/prod
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: false    
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.13.2
