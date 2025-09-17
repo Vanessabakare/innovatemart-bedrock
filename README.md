@@ -144,6 +144,13 @@ kubectl get svc -n default
 ```
 This user can describe resources, view logs, and list objects. It cannot mutate cluster resources.
 
+### Developer read-only AWS Console access
+I created a console login profile for the dev user and added a minimal inline policy so the EKS console can read Kubernetes objects via EKS AccessKubernetesApi.
+- IAM user: project-bedrock-Dev-user
+- Console: https://xxxxxxxxx.signin.aws.amazon.com/console
+- Account: xxxxxxxxxxxx
+- Temporary password: I set a temporary password and require reset at first login. I will share it privately.
+
 ## 8) CI/CD: GitHub Actions for Terraform
 
 I automated provisioning using a single workflow at `.github/workflows/terraform.yml`.
