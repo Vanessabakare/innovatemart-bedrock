@@ -1,4 +1,4 @@
-# InnovateMart Bedrock – EKS Deployment
+# InnovateMart Bedrock
 
 It details how I built a production-ready EKS cluster with Terraform, deployed the AWS Retail Store Sample App, and automated the setup with GitHub Actions.  
 
@@ -59,6 +59,8 @@ innovatemart-bedrock/
 │   └── envs/
 │       └── prod/
 │           ├── backend.hcl    # Remote state config (S3 + DynamoDB)
+            ├── kubeconfig-project-bedrock-dev.yaml  # Kubeconfig file for accessing the Bedrock dev cluster
+            ├── main.tf        # Main entry point for Terraform configuration
 │           ├── providers.tf   # AWS provider
 │           ├── eks.tf         # VPC + EKS + node group modules
 │           └── outputs.tf     # Cluster outputs
