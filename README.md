@@ -276,4 +276,5 @@ encrypt        = true
 - All resources are in a single region (`us-east-1`).  
 - The cluster runs on a current, supported Kubernetes version (`1.32`).  
 
-
+## 11) Disclaimer
+This project is a fictional, personal learning project created for educational and community-sharing purposes. InnovateMart is not a real company.
